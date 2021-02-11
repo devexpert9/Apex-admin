@@ -1,0 +1,170 @@
+<kt-portlet>
+	<kt-portlet-body>
+		<div class="row">
+			<div class="col-md-12">
+			  	<div class="head">
+				   <h2> Update Your Profile</h2>
+			  	</div>	 
+		  	</div>
+
+		  	<form class="kt-form" [formGroup]="homeForm" autocomplete="off" style="float:left;width:100%;">
+			  	<div class="col-md-12" style="clear:both;">
+				  	<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Name</label>
+							<input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name"/>
+
+							<span *ngIf="homeForm.controls.name.hasError('required') && homeForm.controls.name.touched">
+								<strong>Please enter name.</strong>
+							</span>
+
+							<span *ngIf="homeForm.controls.name.hasError('pattern') && homeForm.controls.name.touched">
+								<strong style="color:red">Only characters are allowed for name</strong>
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Email Address</label>
+							<input type="text" class="form-control" id="email" formControlName="email" placeholder="Enter Email"/>
+
+							<span *ngIf="homeForm.controls.email.hasError('required') && homeForm.controls.email.touched">
+								<strong>Please enter email.</strong>
+							</span>
+							<span *ngIf="homeForm.controls.email.hasError('pattern') && homeForm.controls.email.touched">
+								<strong style="color:red">Please enter valid email address.</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12" style="clear:both;">
+					<div class="col-md-6" style="float:left">
+						 	<div class="form-group">
+							    <label>Phone Number</label> 
+								<input type="text" class="form-control" id="phone" formControlName="phone" placeholder="Enter Phone"/>
+
+								<span *ngIf="homeForm.controls.phone.hasError('required') && homeForm.controls.phone.touched">
+									<strong>Please enter phone.</strong>
+								</span>
+
+								<span *ngIf="homeForm.controls.phone.hasError('pattern') && homeForm.controls.phone.touched">
+									<strong style="color:red">Please enter valid phone number. (eg: (xxx) xxx-xxxx)</strong>
+								</span> 
+							</div>
+					</div>
+
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Address</label>
+							<input type="text" class="form-control" id="address" formControlName="address" placeholder="Enter Address"/>
+
+							<!-- <span *ngIf="homeForm.controls.address.hasError('required') && homeForm.controls.address.touched">
+								<strong>Please enter address.</strong>
+							</span> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12" style="clear:both;">
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>City</label>
+							<input type="text" class="form-control" id="city" formControlName="city" placeholder="Enter City"/>
+
+							<span *ngIf="homeForm.controls.city.hasError('required') && homeForm.controls.city.touched">
+								<strong>Please enter city.</strong>
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>State</label>
+							<input type="text" class="form-control" id="state" formControlName="state" placeholder="Enter State"/>
+
+							<span *ngIf="homeForm.controls.state.hasError('required') && homeForm.controls.state.touched">
+								<strong>Please enter state.</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12" style="clear:both;">
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Zip Code</label>
+							<input type="text" class="form-control" id="zipcode" formControlName="zipcode" placeholder="Zip Code"/>
+
+							<span *ngIf="homeForm.controls.zipcode.hasError('required') && homeForm.controls.zipcode.touched">
+								<strong>Please enter zipcode.</strong>
+							</span>
+
+							<span *ngIf="homeForm.controls.zipcode.hasError('pattern') && homeForm.controls.zipcode.touched">
+								<strong style="color:red">Please enter valid zipcode.</strong>
+							</span>
+						</div>
+					</div>
+					
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Username</label>
+						    <input type="text" class="form-control" value='{{username}}' readonly="" style="background:#e3e3e3;font-weight: 500;" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-12" style="clear:both;">
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Registration Date</label>
+						    <input type="text" class="form-control" value='{{registrationdate | date:"MM/dd/yyyy"}}' readonly="" style="background:#e3e3e3;font-weight: 500;" />
+						</div>
+					</div>
+
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Expiration</label>
+						    <input type="text" class="form-control" value='{{expirydate | date:"MM/dd/yyyy"}}' readonly="" style="background:#e3e3e3;font-weight: 500;" />
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12" style="clear:both;">
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Old Password</label>
+						    <input type="password" class="form-control" formControlName="old_password" placeholder="Old Password"/>
+						</div>
+					</div>
+
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>New Password</label>
+						    <input type="password" class="form-control" formControlName="new_password" placeholder="New Password"/>
+
+						    <span *ngIf="homeForm.controls.new_password.hasError('pattern') && homeForm.controls.new_password.touched">
+								<strong style="color:red">Password is required with min. 6 & max. 15 characters</strong>
+							</span>
+						</div>
+					</div>
+
+					<div class="col-md-6" style="float:left">
+					 	<div class="form-group">
+						    <label>Confirm Password</label>
+						    <input type="password" class="form-control" formControlName="confirm_password" placeholder="Confirm Password"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 text-right" style="clear:both;">
+				 	<button class="btn btn-submit mt-3" (click)="submit()">
+				 		Submit
+				 	</button>
+				</div>
+			</form>
+		</div>
+
+	</kt-portlet-body>
+</kt-portlet> 	

@@ -1,0 +1,51 @@
+:host {
+	::ng-deep {
+		.kt-loading-bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+
+			.progress-bar {
+				background-color: #3d4aed;
+			}
+		}
+
+		.kt-header__topbar-item {
+			height: 100%;
+		}
+
+		@media (min-width: 1025px) {
+			.kt-header__topbar, .kt-header__topbar-item-wrapper {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.data_err{
+    font-weight: 500;
+    background: orange;
+    color: #000;
+    opacity: .8;
+    padding: 10px 8px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 3px;
+    display: inline-block;
+    float: right;
+}
+
+.days_err{
+    font-weight: 500;
+    background: orange;
+    color: #000;
+    opacity: .8;
+    padding: 10px 8px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 3px;
+    display: inline-block;
+    float: right;
+}

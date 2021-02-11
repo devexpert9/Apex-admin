@@ -1,0 +1,41 @@
+<!-- begin: Header -->
+
+
+<div ktHeader #ktHeader class="kt-header kt-grid__item" [ngClass]="htmlClassService.getClasses('header', true)" id="kt_header">
+	<ngb-progressbar class="kt-loading-bar" *ngIf="(loader.progress$|async) > 0" [value]="loader.progress$|async" height="3px"></ngb-progressbar>
+	<div class="kt-header__top">
+		<div class="kt-container" [ngClass]="{'kt-container--fluid': fluid}">
+			<!-- begin:: Brand -->
+			<kt-brand></kt-brand>
+			<!-- end:: Brand -->
+			<!-- begin:: Header Topbar -->
+			<kt-topbar></kt-topbar>
+			<!-- end:: Header Topbar -->
+
+			
+		
+		</div>
+
+	</div >
+	<!-- header warning msgs -->
+		<!-- begin:: Footer -->
+		<div class="error_msg" style="position: relative;z-index: 99; margin:0 0 5px 0;" *ngIf="errorChk?.status == '0' || diffDays < 22">
+			<div class="data_err" *ngIf="errorChk?.status == '0'">
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please add some data under home tab to enable your web page.
+			</div>
+			<div class="days_err" *ngIf="diffDays < 22">
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Your subscription will expire in {{diffDays}} day(s).
+			</div>
+		</div>
+		<!-- header warning ends here -->
+	<div class="kt-header__bottom">
+		<div class="kt-container" [ngClass]="{'kt-container--fluid': fluid}">
+			<!-- begin: Header Menu -->
+			<kt-menu-horizontal *ngIf="menuHeaderDisplay"></kt-menu-horizontal>
+			<!-- end: Header Menu -->
+		</div>
+	</div>
+
+
+</div>
+<!-- end: Header -->

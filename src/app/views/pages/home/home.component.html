@@ -1,0 +1,164 @@
+
+<kt-portlet>
+	<kt-portlet-body>
+		<div class="row">
+			<div class="col-md-12">
+			  	<div class="head">
+				   <h2> Home</h2>
+			  	</div>
+
+			  	<div class="kt-form" [formGroup]="homeForm" autocomplete="off">
+				    <div class="form-group">
+					    <label>Banner Text</label>
+						
+						<ejs-richtexteditor #toolsRTE id='alltoolRTE' [toolbarSettings]='tools' formControlName="banner_text"></ejs-richtexteditor>
+
+						<span *ngIf="homeForm.controls.banner_text.hasError('required') && homeForm.controls.banner_text.touched">
+							<strong>Please add banner text.</strong>
+						</span>
+			      	</div>
+						  
+				  	<!-- <div class="form-group">
+					    <label>Banner Image</label>
+						<label class="fileupload" for="bannerimg">
+						  <i class="fa fa-upload"></i>
+						 <h3> Drag Image Here</h3>
+						</label>
+						<input type="file"  id="banner_img" style="display:none" formControlName="bannerimg"/>
+						<div class="formimg">
+					      <img height="110px" src=""/>
+						    <i class="fa fa-times"></i>
+				        </div>
+		     	 	</div> -->
+		     	 	<div class="form-group">
+		     	 		<label>Banner Image <em style="font-size: 12px; color: chocolate;margin: 0 0 0 12px;">* Size should be 300 x 300</em> </label>
+		     	 		<div class='imageParent'>
+		     	 			<input type="file" (change)="onFileChanged($event,image)" #fileInput  name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="15KB" id="input-file-now" class="dropify" filepreview="filepreview" formControlName='banner_image' fileinput="file"  ngf-select>
+                   		</div>
+					    
+					    <span *ngIf="imageSizeError" style="font-weight:bold;color:red;">
+							{{imageSizeError}}
+						</span>
+
+					    <div class="formimg" style="width:100%;display:inline-block;margin:10px 0 0 0;">
+					      <img height="110px" src="{{banner_image}}" id="ban_img"/>
+				        </div>
+
+				        <!-- <span *ngIf="showError">
+							<strong>Please add banner image.</strong>
+						</span> -->
+						
+						<span *ngIf="showError">
+							<strong>Please add banner image.</strong>
+						</span>
+		     	 	</div>
+				  	<div #sectionDiv>
+					  	<div class="form-group" *ngFor="let sec of sections;let i=index;">
+					  		<div style="clear:both;">
+						  		<div style="padding:48px 0 0 17px; float: left;width:2%;margin-right:3%">
+						  			<input type="checkbox" name="" checked *ngIf="sec?.isChecked == true"/>
+						  			<input type="checkbox" name=""  *ngIf="sec?.isChecked != true"/>
+						  		</div>
+
+						  		<div style="float: left;width:43%;margin-right:3%">
+								    <label>{{sec?.name}}</label>
+									<input type="text" class="form-control" value="{{sec?.url}}" placeholder="Enter Url"/>
+								</div>
+
+								<div style="float: left;width:43%;">
+								    <label>{{sec?.name}} Button text</label>
+									<input type="text" class="form-control" placeholder="Enter Button Text" value="{{sec?.text}}"/>
+								</div>
+							</div>
+						</div> 
+				 	</div>
+				 	<!-- <div class="form-group" *ngIf="conditionalSections.disabilityHeadingCheckbox">
+				 		<div style="float: left;width:48%;margin-right:3%">
+						    <label>Disability Url</label>
+							<input type="text" class="form-control" id="disabilityUrl" formControlName="disability_url" placeholder="Enter Url"/>
+							
+							<span *ngIf="homeForm.controls.disability_url.hasError('required') && homeForm.controls.disability_url.touched">
+								<strong>Please add disability url.</strong>
+							</span>
+
+							<span *ngIf="homeForm.controls.disability_url.hasError('pattern') && homeForm.controls.disability_url.touched">
+								<strong>Please enter correct url</strong>
+							</span>
+						</div>
+
+						<div style="float: left;width:48%;">
+						    <label>Disability Button text</label>
+							<input type="text" class="form-control" id="disability_urltext"  formControlName="disability_urltext" placeholder="Enter Button Text"/>
+							
+							<span *ngIf="homeForm.controls.disability_urltext.hasError('required') && homeForm.controls.disability_urltext.touched">
+								<strong>Please add button text.</strong>
+							</span>
+						</div>
+					</div>
+						 
+				 	<div class="form-group" *ngIf="conditionalSections.propHeadingCheckbox">
+				 		<div style="float: left;width:48%;margin-right:3%">
+						    <label>Property And Casuality Url</label>
+							<input type="text" class="form-control" id="casualityUrl" formControlName="casuality_url" placeholder="Enter Url"/>
+
+							<span *ngIf="homeForm.controls.casuality_url.hasError('required') && homeForm.controls.casuality_url.touched">
+								<strong>Please add property & casuality url.</strong>
+							</span>
+
+							<span *ngIf="homeForm.controls.casuality_url.hasError('pattern') && homeForm.controls.casuality_url.touched">
+								<strong>Please enter correct url</strong>
+							</span>
+						</div>
+
+						<div style="float: left;width:48%;">
+						    <label>Property And Casuality Button text</label>
+							<input type="text" class="form-control" id="casuality_urltext"  formControlName="casuality_urltext" placeholder="Enter Button Text"/>
+							
+							<span *ngIf="homeForm.controls.casuality_urltext.hasError('required') && homeForm.controls.self_urltext.touched">
+								<strong>Please add button text.</strong>
+							</span>
+						</div>
+					</div> -->
+
+					<div class="form-group">
+					    <label style="float:left;width:100%;margin:35px 0 0 0">Select Template</label>
+
+					    <div style="float:left;width: 20%;">
+					    	<input type="radio" class="form-control" formControlName="template" name="template" value="version1" style="float:left;width:15px;margin-right:10px;"/>
+
+					    	<img src='assets/media/v1.png' style="float:left;width: 170px;height: 130px;"/>
+					    </div>
+
+					    <div style="float:left;width: 20%;">
+					    	<input type="radio" class="form-control" formControlName="template" name="template" value="version2" style="float:left;width:15px;margin-right:10px;"/>
+					    	
+					    	<img src='assets/media/v2.png' style="float:left;width: 170px;height: 130px;"/>
+					    </div>
+
+					    <div style="float:left;width: 20%;">
+					    	<input type="radio" class="form-control" formControlName="template" name="template" value="version3" style="float:left;width:15px;margin-right:10px;"/>
+					    	
+					    	<img src='assets/media/v3.png' style="float:left;width: 170px;height: 130px;"/>
+					    </div>
+
+					    <div style="float:left;width: 20%;">
+					    	<input type="radio" class="form-control" formControlName="template" name="template" value="version4" style="float:left;width:15px;margin-right:10px;"/>
+					    	
+					    	<img src='assets/media/v4.png' style="float:left;width: 170px;height: 130px;"/>
+					    </div>
+					</div>
+				
+					<!-- <hr> -->
+					<div class="col-md-12 text-right" style="clear:both">
+					 	<button class="btn btn-submit mt-3" (click)="submit()">
+					 		Submit
+					 	</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</kt-portlet-body>
+</kt-portlet> 
+
+
+		

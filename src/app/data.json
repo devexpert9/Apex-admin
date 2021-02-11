@@ -1,0 +1,752 @@
+[
+  {
+    "icons": "fas fa-address-book"
+  },
+  {
+    "icons": "fas fa-address-card"
+  },
+  {
+    "icons": "fas fa-adjust"
+  },
+  {
+    "icons": "fas fa-align-center"
+  },
+  {
+    "icons": "fas fa-align-justify"
+  },
+  {
+    "icons": "fas fa-align-left"
+  },
+  {
+    "icons": "fas fa-align-right"
+  },
+  {
+    "icons": "fas fa-allergies"
+  },
+  {
+    "icons": "fas fa-ambulance"
+  },
+  {
+    "icons": "fas fa-american-sign-language-interpreting"
+  },
+  {
+    "icons": "fas fa-anchor"
+  },
+  {
+    "icons": "fas fa-angle-double-down"
+  },
+  {
+    "icons": "fas fa-angle-double-left"
+  },
+  {
+    "icons": "fas fa-angle-double-right"
+  },
+  {
+    "icons": "fas fa-angle-double-up"
+  },
+  {
+    "icons": "fas fa-angle-down"
+  },
+  {
+    "icons": "fas fa-angle-left"
+  },
+  {
+    "icons": "fas fa-angle-right"
+  },
+  {
+    "icons": "fas fa-angle-up"
+  },
+  {
+    "icons": "fas fa-archive"
+  },
+  {
+    "icons": "fas fa-arrow-alt-circle-down"
+  },
+  {
+    "icons": "fas fa-arrow-alt-circle-left"
+  },
+  {
+    "icons": "fas fa-arrow-alt-circle-right"
+  },
+  {
+    "icons": "fas fa-arrow-alt-circle-up"
+  },
+  
+  {
+    "icons": "fas fa-arrow-circle-down"
+  },
+  {
+    "icons": "fas fa-arrow-circle-left"
+  },
+  {
+    "icons": "fas fa-arrow-circle-right"
+  },
+  {
+    "icons": "fas fa-arrow-circle-up"
+  },
+  {
+    "icons": "fas fa-arrow-down"
+  },
+  
+  {
+    "icons": "fas fa-arrow-left"
+  },
+  {
+    "icons": "fas fa-arrow-right"
+  },
+  
+  {
+    "icons": "fas fa-arrow-up"
+  },
+  {
+    "icons": "fas fa-arrows-alt"
+  },
+  {
+    "icons": "fas fa-arrows-alt-h"
+  },
+  {
+    "icons": "fas fa-arrows-alt-v"
+  },
+  {
+    "icons": "fas fa-assistive-listening-systems"
+  },
+  {
+    "icons": "fas fa-asterisk"
+  },
+  {
+    "icons": "fas fa-at"
+  },
+  {
+    "icons": "fas fa-audio-description"
+  },
+  {
+    "icons": "fas fa-backward"
+  },
+  {
+    "icons": "fas fa-balance-scale"
+  },
+  {
+    "icons": "fas fa-ban"
+  },
+  {
+    "icons": "fas fa-band-aid"
+  },
+  {
+    "icons": "fas fa-barcode"
+  },
+  {
+    "icons": "fas fa-bars"
+  },
+  {
+    "icons": "fas fa-baseball-ball"
+  },
+  {
+    "icons": "fas fa-battery-empty"
+  },
+  {
+    "icons": "fas fa-battery-full"
+  },
+  {
+    "icons": "fas fa-battery-half"
+  },
+  {
+    "icons": "fas fa-battery-quarter"
+  },
+  {
+    "icons": "fas fa-battery-three-quarters"
+  },
+  {
+    "icons": "fas fa-bed"
+  },
+  {
+    "icons": "fas fa-beer"
+  },
+  {
+    "icons": "fas fa-bell"
+  },
+  {
+    "icons": "fas fa-bell-slash"
+  },
+  {
+    "icons": "fas fa-bicycle"
+  },
+  {
+    "icons": "fas fa-binoculars"
+  },
+  {
+    "icons": "fas fa-birthday-cake"
+  },
+  {
+    "icons": "fas fa-blind"
+  },
+  {
+    "icons": "fas fa-bold"
+  },
+  {
+    "icons": "fas fa-bolt"
+  },
+  {
+    "icons": "fas fa-bomb"
+  },
+  {
+    "icons": "fas fa-book"
+  },
+  {
+    "icons": "fas fa-bookmark"
+  },
+  {
+    "icons": "fas fa-bowling-ball"
+  },
+  {
+    "icons": "fas fa-box"
+  },
+  {
+    "icons": "fas fa-box-open"
+  },
+  {
+    "icons": "fas fa-boxes"
+  },
+  {
+    "icons": "fas fa-braille"
+  },
+  {
+    "icons": "fas fa-briefcase"
+  },
+  {
+    "icons": "fas fa-briefcase-medical"
+  },
+  {
+    "icons": "fas fa-bug"
+  },
+  {
+    "icons": "fas fa-building"
+  },
+  {
+    "icons": "fas fa-bullhorn"
+  },
+  {
+    "icons": "fas fa-bullseye"
+  },
+  {
+    "icons": "fas fa-burn"
+  },
+  {
+    "icons": "fas fa-bus"
+  },
+  {
+    "icons": "fas fa-calculator"
+  },
+  {
+    "icons": "fas fa-calendar"
+  },
+  {
+    "icons": "fas fa-calendar-alt"
+  },
+  {
+    "icons": "fas fa-calendar-check"
+  },
+  {
+    "icons": "fas fa-calendar-minus"
+  },
+  {
+    "icons": "fas fa-calendar-plus"
+  },
+  {
+    "icons": "fas fa-calendar-times"
+  },
+  {
+    "icons": "fas fa-camera"
+  },
+  {
+    "icons": "fas fa-camera-retro"
+  },
+  {
+    "icons": "fas fa-capsules"
+  },
+  {
+    "icons": "fas fa-car"
+  },
+  {
+    "icons": "fas fa-caret-down"
+  },
+  {
+    "icons": "fas fa-caret-left"
+  },
+  {
+    "icons": "fas fa-caret-right"
+  },
+  {
+    "icons": "fas fa-caret-square-down"
+  },
+  {
+    "icons": "fas fa-caret-square-left"
+  },
+  {
+    "icons": "fas fa-caret-square-right"
+  },
+  {
+    "icons": "fas fa-caret-square-up"
+  },
+  {
+    "icons": "fas fa-caret-up"
+  },
+  {
+    "icons": "fas fa-cart-arrow-down"
+  },
+  {
+    "icons": "fas fa-cart-plus"
+  },
+  {
+    "icons": "fas fa-certificate"
+  },
+  {
+    "icons": "fas fa-chart-area"
+  },
+  {
+    "icons": "fas fa-chart-bar"
+  },
+  {
+    "icons": "fas fa-chart-line"
+  },
+  {
+    "icons": "fas fa-chart-pie"
+  },
+  {
+    "icons": "fas fa-check"
+  },
+  {
+    "icons": "fas fa-check-circle"
+  },
+  {
+    "icons": "fas fa-check-square"
+  },
+  {
+    "icons": "fas fa-chess"
+  },
+  {
+    "icons": "fas fa-chess-bishop"
+  },
+  {
+    "icons": "fas fa-chess-board"
+  },
+  {
+    "icons": "fas fa-chess-king"
+  },
+  {
+    "icons": "fas fa-chess-knight"
+  },
+  {
+    "icons": "fas fa-chess-pawn"
+  },
+  {
+    "icons": "fas fa-chess-queen"
+  },
+  {
+    "icons": "fas fa-chess-rook"
+  },
+  {
+    "icons": "fas fa-chevron-circle-down"
+  },
+  {
+    "icons": "fas fa-chevron-circle-left"
+  },
+  {
+    "icons": "fas fa-chevron-circle-right"
+  },
+  {
+    "icons": "fas fa-chevron-circle-up"
+  },
+  {
+    "icons": "fas fa-chevron-down"
+  },
+  {
+    "icons": "fas fa-chevron-left"
+  },
+  {
+    "icons": "fas fa-chevron-right"
+  },
+  {
+    "icons": "fas fa-chevron-up"
+  },
+  {
+    "icons": "fas fa-child"
+  },
+  {
+    "icons": "fas fa-circle"
+  },
+  {
+    "icons": "fas fa-circle-notch"
+  },
+  {
+    "icons": "fas fa-clipboard"
+  },
+  {
+    "icons": "fas fa-clipboard-check"
+  },
+  {
+    "icons": "fas fa-clipboard-list"
+  },
+  {
+    "icons": "fas fa-clock"
+  },
+  {
+    "icons": "fas fa-clone"
+  },
+  {
+    "icons": "fas fa-closed-captioning"
+  },
+  {
+    "icons": "fas fa-cloud"
+  },
+  {
+    "icons": "fas fa-cloud-download-alt"
+  },
+  {
+    "icons": "fas fa-cloud-upload-alt"
+  },
+  {
+    "icons": "fas fa-code"
+  },
+  {
+    "icons": "fas fa-code-branch"
+  },
+  {
+    "icons": "fas fa-coffee"
+  },
+  {
+    "icons": "fas fa-cog"
+  },
+  {
+    "icons": "fas fa-cogs"
+  },
+  {
+    "icons": "fas fa-columns"
+  },
+  {
+    "icons": "fas fa-comment"
+  },
+  {
+    "icons": "fas fa-comment-alt"
+  },
+  {
+    "icons": "fas fa-comment-dots"
+  },
+  {
+    "icons": "fas fa-comment-slash"
+  },
+  {
+    "icons": "fas fa-comments"
+  },
+  {
+    "icons": "fas fa-compass"
+  },
+  {
+    "icons": "fas fa-compress"
+  },
+  {
+    "icons": "fas fa-compress-alt"
+  },
+  {
+    "icons": "fas fa-copy"
+  },
+  {
+    "icons": "fas fa-copyright"
+  },
+  {
+    "icons": "fas fa-couch"
+  },
+  {
+    "icons": "fas fa-credit-card"
+  },
+  {
+    "icons": "fas fa-crop"
+  },
+  {
+    "icons": "fas fa-crosshairs"
+  },
+  {
+    "icons": "fas fa-cube"
+  },
+  {
+    "icons": "fas fa-cubes"
+  },
+  {
+    "icons": "fas fa-cut"
+  },
+  {
+    "icons": "fas fa-database"
+  },
+  {
+    "icons": "fas fa-deaf"
+  },
+  {
+    "icons": "fas fa-desktop"
+  },
+  {
+    "icons": "fas fa-diagnoses"
+  },
+  {
+    "icons": "fas fa-dna"
+  },
+  {
+    "icons": "fas fa-dollar-sign"
+  },
+  {
+    "icons": "fas fa-dolly"
+  },
+  {
+    "icons": "fas fa-dolly-flatbed"
+  },
+  {
+    "icons": "fas fa-donate"
+  },
+  {
+    "icons": "fas fa-dot-circle"
+  },
+  {
+    "icons": "fas fa-dove"
+  },
+  {
+    "icons": "fas fa-download"
+  },
+  {
+    "icons": "fas fa-dumbbell"
+  },
+  {
+    "icons": "fas fa-edit"
+  },
+  {
+    "icons": "fas fa-eject"
+  },
+  {
+    "icons": "fas fa-ellipsis-h"
+  },
+  {
+    "icons": "fas fa-ellipsis-v"
+  },
+  {
+    "icons": "fas fa-envelope"
+  },
+  {
+    "icons": "fas fa-envelope-open"
+  },
+  {
+    "icons": "fas fa-envelope-square"
+  },
+  {
+    "icons": "fas fa-eraser"
+  },
+  {
+    "icons": "fas fa-euro-sign"
+  },
+  {
+    "icons": "fas fa-exchange-alt"
+  },
+  {
+    "icons": "fas fa-exclamation"
+  },
+  {
+    "icons": "fas fa-exclamation-circle"
+  },
+  {
+    "icons": "fas fa-exclamation-triangle"
+  },
+  {
+    "icons": "fas fa-expand"
+  },
+  {
+    "icons": "fas fa-expand-alt"
+  },
+  {
+    "icons": "fas fa-expand-arrows-alt"
+  },
+  {
+    "icons": "fas fa-external-link-alt"
+  },
+  {
+    "icons": "fas fa-external-link-square-alt"
+  },
+  {
+    "icons": "fas fa-eye"
+  },
+  {
+    "icons": "fas fa-eye-dropper"
+  },
+  {
+    "icons": "fas fa-eye-slash"
+  },
+  {
+    "icons": "fas fa-fax"
+  },
+  {
+    "icons": "fas fa-female"
+  },
+  {
+    "icons": "fas fa-fighter-jet"
+  },
+  {
+    "icons": "fas fa-file"
+  },
+  {
+    "icons": "fas fa-file-alt"
+  },
+  {
+    "icons": "fas fa-file-archive"
+  },
+  {
+    "icons": "fas fa-file-audio"
+  },
+  {
+    "icons": "fas fa-file-code"
+  },
+  {
+    "icons": "fas fa-file-excel"
+  },
+  {
+    "icons": "fas fa-file-image"
+  },
+  {
+    "icons": "fas fa-file-medical"
+  },
+  {
+    "icons": "fas fa-file-medical-alt"
+  },
+  {
+    "icons": "fas fa-file-pdf"
+  },
+  {
+    "icons": "fas fa-file-powerpoint"
+  },
+  {
+    "icons": "fas fa-file-video"
+  },
+  {
+    "icons": "fas fa-file-word"
+  },
+  {
+    "icons": "fas fa-film"
+  },
+  {
+    "icons": "fas fa-filter"
+  },
+  {
+    "icons": "fas fa-fire"
+  },
+  {
+    "icons": "fas fa-fire-extinguisher"
+  },
+  {
+    "icons": "fas fa-first-aid"
+  },
+  {
+    "icons": "fas fa-flag"
+  },
+  {
+    "icons": "fas fa-flag-checkered"
+  },
+  {
+    "icons": "fas fa-flask"
+  },
+  {
+    "icons": "fas fa-folder"
+  },
+  {
+    "icons": "fas fa-folder-open"
+  },
+  {
+    "icons": "fas fa-font"
+  },
+  {
+    "icons": "fas fa-football-ball"
+  },
+  {
+    "icons": "fas fa-forward"
+  },
+  {
+    "icons": "fas fa-frown"
+  },
+  {
+    "icons": "fas fa-futbol"
+  },
+  {
+    "icons": "fas fa-gamepad"
+  },
+  {
+    "icons": "fas fa-gavel"
+  },
+  {
+    "icons": "fas fa-gem"
+  },
+  {
+    "icons": "fas fa-genderless"
+  },
+  {
+    "icons": "fas fa-gift"
+  },
+  {
+    "icons": "fas fa-glass-martini"
+  },
+  {
+    "icons": "fas fa-globe"
+  },
+  {
+    "icons": "fas fa-golf-ball"
+  },
+  {
+    "icons": "fas fa-graduation-cap"
+  },
+  {
+    "icons": "fas fa-h-square"
+  },
+  {
+    "icons": "fas fa-hand-holding"
+  },
+  {
+    "icons": "fas fa-hand-holding-heart"
+  },
+  {
+    "icons": "fas fa-hand-holding-usd"
+  },
+  {
+    "icons": "fas fa-hand-holding-water"
+  },
+  {
+    "icons": "fas fa-hand-lizard"
+  },
+  {
+    "icons": "fas fa-hand-paper"
+  },
+  {
+    "icons": "fas fa-hand-peace"
+  },
+  {
+    "icons": "fas fa-hand-point-down"
+  },
+  {
+    "icons": "fas fa-hand-point-left"
+  },
+  {
+    "icons": "fas fa-hand-point-right"
+  },
+  {
+    "icons": "fas fa-hand-point-up"
+  },
+  {
+    "icons": "fas fa-hand-pointer"
+  },
+  {
+    "icons": "fas fa-hand-receiving"
+  },
+  {
+    "icons": "fas fa-hand-rock"
+  },
+  {
+    "icons": "fas fa-hand-scissors"
+  },
+  {
+    "icons": "fas fa-hand-spock"
+  },
+  {
+    "icons": "fas fa-hands"
+  }
+]

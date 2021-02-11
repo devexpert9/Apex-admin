@@ -1,0 +1,467 @@
+<div class="row" cdkDropListGroup>
+	<div class="col-xl-4 colorlist1">
+		<kt-portlet [class]="'   kt-portlet--height-fluid'" >
+			<!-- <kt-portlet-header [title]="'Quote Engines'"> -->
+			<!-- <kt-portlet-header [title]="'My Space'"> -->
+			<kt-portlet-header  style='width:100%'>
+				<ng-container ktPortletTools style='width:100%'>
+					<div>
+						<input  type="text" placeholder="Enter Heading" [(ngModel)]="section1" (focus)="focusFunction()" (focusout)="focusOutFunction('1',section1)" value='{{sectionsHeadings1?.title}}' style="padding:0 0 0 10px;border:none;"/>
+					</div>
+				</ng-container>
+				
+				<ng-container ktPortletTools style='color: red'>
+					
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'quoteEngines')">
+					    <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header>
+			<kt-portlet-body style="overflow-y:scroll; height:300px;">
+				<div class="row" style="background: #e4e1e1;width: 99%;padding: 1px;">
+					<div cdkDropList #todoList="cdkDropList" [cdkDropListData]="getSectionData?.data?.quoteEngines" class="quoteEngines example-list" (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[todoList]" >
+					    <div class="col-md-12" *ngFor="let datas of getSectionData?.data?.quoteEngines; let i = index" cdkDrag>
+					        <div class="dashlist">
+								<a href="javascript:void(0)" class="listdash">
+									<span class="iconlist">
+										<!-- <i *ngIf="!datas?.data?.icon" class="fa fa-user"></i> -->
+										<i *ngIf="datas?.data?.icon =='fa fa-check-double'" class="fa fa-user"></i>
+
+										<i *ngIf="datas?.data?.icon !='fa fa-check-double'" class="{{datas.data.icon}}"></i>
+
+
+										<!-- <i *ngIf="datas?.data?.icon" class="{{datas.data.icon}}"></i> -->
+									</span>
+									<span class="list-text">
+										<span (click)="openWindow(datas)">
+											<!-- {{datas.data.icon}} -->
+									    	{{datas.data.button_name}}
+									    </span>
+										
+										<span class="editbutton" style="float: right;position: absolute; width: auto; right: 46px;" (click)="viewEntry(content1, datas)">
+											<i _ngcontent-lox-c14="" class="fa fa-eye"></i>
+										</span>
+
+										<span class="editbutton" (click)="editEntry(content,'quoteEngines',i,datas._id)" style="float: right;position: absolute; width: auto; right: 22px; ">
+											<i class="flaticon2-edit"></i>
+										</span>
+
+										<span class="editbutton" (click)="deleteRow(datas._id, i, 'quoteEngines')" style="position:absolute;right:0">
+											<i class="flaticon2-delete"></i>
+										</span>
+									</span>
+								</a>
+							</div>
+					    </div>
+					</div>
+				</div>
+			</kt-portlet-body>
+		</kt-portlet>
+	</div>
+
+	<div class="col-xl-4 colorlist2">
+		<kt-portlet [class]="'   kt-portlet--height-fluid'">
+			<!-- <kt-portlet-header [title]="'Front Page 24 / 7 '">
+				<ng-container ktPortletTools>
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'frontPage')">
+						  <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header> -->
+
+			<kt-portlet-header  style='width:100%'>
+				<ng-container ktPortletTools style='width:100%'>
+					<div>
+						<input  type="text" placeholder="Enter Heading" [(ngModel)]="section2" (focus)="focusFunction()" (focusout)="focusOutFunction('2',section2)" value='{{sectionsHeadings2?.title}}' style="padding:0 0 0 10px;border:none;"/>
+					</div>
+				</ng-container>
+				
+				<ng-container ktPortletTools style='color: red'>
+					
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'frontPage')">
+						  <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header>
+
+			<kt-portlet-body style="overflow-y:scroll; height:300px;">
+				<div class="row" style="background: #e4e1e1;width: 99%;padding: 1px;">
+					<div cdkDropList #doneList="cdkDropList" [cdkDropListData]="getSectionData?.data?.frontPage" class="frontPage example-list" (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[doneList]">
+					    <div class="col-md-12" *ngFor="let datas of getSectionData?.data?.frontPage; let i = index" cdkDrag>
+					        <div class="dashlist">
+								<a href="javascript:void(0)" class="listdash">
+									<span class="iconlist">
+										<i *ngIf="!datas?.data?.icon" class="fa fa-check-double"></i>
+										<i *ngIf="datas?.data?.icon" class="{{datas.data.icon}}"></i>
+									</span>
+									<span class="list-text">
+										<span (click)="openWindow(datas)">
+									    	{{datas.data.button_name}}
+									    </span>
+										
+										<span class="editbutton" style="float: right;position: absolute; width: auto; right: 46px; " (click)="viewEntry(content1, datas)">
+											<a  style="color:#fff">
+												<i _ngcontent-lox-c14="" class="fa fa-eye"></i>
+											</a>
+										</span>
+
+										<span class="editbutton" (click)="editEntry(content,'frontPage',i,datas._id)" style="float: right;position: absolute; width: auto; right: 22px; ">
+											<i class="flaticon2-edit"></i>
+										</span>
+
+										<span class="editbutton" (click)="deleteRow(datas._id, i, 'frontPage')" style="position:absolute;right:0">
+											<i class="flaticon2-delete"></i>
+										</span>
+									</span>
+								</a>
+							</div>
+						</div>
+				    </div>
+				</div>
+			</kt-portlet-body>
+		</kt-portlet>
+	</div>
+
+	<div class="col-xl-4 colorlist3">
+		<kt-portlet [class]="'   kt-portlet--height-fluid'">
+			<kt-portlet-header>
+				<ng-container ktPortletTools>
+					<div>
+						<input  type="text" placeholder="Enter Heading" [(ngModel)]="section3" (focus)="focusFunction()" (focusout)="focusOutFunction('3',section3)" value="{{sectionsHeadings3?.title}}" style="padding:0 0 0 10px;border:none;"/>
+					</div>
+				</ng-container>
+
+				<ng-container ktPortletTools>
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'marketingSystem')">
+						  <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header>
+			<kt-portlet-body style="overflow-y:scroll; height:300px;">
+				<div class="row" style="background: #e4e1e1;width: 99%;padding: 1px;">
+					<div cdkDropList [cdkDropListData]="getSectionData?.data?.marketingSystem" class="marketingSystem example-list" (cdkDropListDropped)="drop($event)">
+			    		<div class="col-md-12" *ngFor="let datas of getSectionData?.data?.marketingSystem; let i = index" cdkDrag >
+					        <div class="dashlist">
+								<a href="javascript:void(0)" class="listdash">
+									<span class="iconlist">
+										<i *ngIf="!datas?.data?.icon" class="fa fa-check-double"></i>
+										<i *ngIf="datas?.data?.icon" class="{{datas.data.icon}}"></i>
+									</span>
+									<span class="list-text">
+										<span (click)="openWindow(datas)">
+									    	{{datas.data.button_name}}
+									    </span>
+										
+										<span class="editbutton" style="float: right;position: absolute; width: auto; right: 46px; " (click)="viewEntry(content1, datas)">
+											<a  style="color:#fff">
+												<i _ngcontent-lox-c14="" class="fa fa-eye"></i>
+											</a>
+										</span>
+
+										<span class="editbutton" (click)="editEntry(content,'marketingSystem',i,datas._id)" style="float: right;position: absolute; width: auto; right: 22px; ">
+											<i class="flaticon2-edit"></i>
+										</span>
+
+										<span class="editbutton" (click)="deleteRow(datas._id, i, 'marketingSystem')" style="position:absolute;right:0">
+											<i class="flaticon2-delete"></i>
+										</span>
+									</span>
+								</a>
+							</div>
+					    </div>
+				    </div>
+				</div>
+
+			</kt-portlet-body>
+		</kt-portlet>
+	</div>
+
+	<div class="col-xl-4 colorlist3">
+		<kt-portlet [class]="'   kt-portlet--height-fluid'">
+			<kt-portlet-header>
+				<ng-container ktPortletTools>
+					<div>
+						<input  type="text" placeholder="Enter Heading" [(ngModel)]="section4" (focus)="focusFunction()" (focusout)="focusOutFunction('4',section4)" value="{{sectionsHeadings4?.title}}" style="padding:0 0 0 10px;border:none;"/>
+					</div>
+				</ng-container>
+				<ng-container ktPortletTools>
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'virtualSalePlatform')">
+						  <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header>
+			<kt-portlet-body style="overflow-y:scroll; height:300px;">
+				<div class="row" style="background: #e4e1e1;width: 99%;padding: 1px;">
+					<div cdkDropList [cdkDropListData]="getSectionData?.data?.virtualSalePlatform" class="virtualSalePlatform example-list" (cdkDropListDropped)="drop($event)">
+					    <div class="col-md-12" *ngFor="let datas of getSectionData?.data?.virtualSalePlatform; let i = index" cdkDrag>
+					        <div class="dashlist">
+								<a href="javascript:void(0)" class="listdash">
+									<span class="iconlist">
+										<i *ngIf="!datas?.data?.icon" class="fa fa-check-double"></i>
+										<i *ngIf="datas?.data?.icon" class="{{datas.data.icon}}"></i>
+									</span>
+									<span class="list-text">
+										<span (click)="openWindow(datas)">
+									    	{{datas.data.button_name}}
+									    </span>
+										
+										<span class="editbutton" style="float: right;position: absolute; width: auto; right: 46px; " (click)="viewEntry(content1, datas)">
+											<a  style="color:#fff">
+												<i _ngcontent-lox-c14="" class="fa fa-eye"></i>
+											</a>
+										</span>
+
+										<span class="editbutton" (click)="editEntry(content,'virtualSalePlatform',i,datas._id)" style="float: right;position: absolute; width: auto; right: 22px; ">
+											<i class="flaticon2-edit"></i>
+										</span>
+
+										<span class="editbutton" (click)="deleteRow(datas._id, i, 'virtualSalePlatform')" style="position:absolute;right:0">
+											<i class="flaticon2-delete"></i>
+										</span>
+									</span>
+								</a>
+							</div>
+					    </div>
+					</div>
+				</div>
+
+			</kt-portlet-body>
+		</kt-portlet>
+	</div>
+
+	<div class="col-xl-4 colorlist2">
+		<kt-portlet [class]="'   kt-portlet--height-fluid'" >
+			<kt-portlet-header>
+				<ng-container ktPortletTools>
+					<div>
+						<input  type="text" placeholder="Enter Heading" [(ngModel)]="section5" (focus)="focusFunction()" (focusout)="focusOutFunction('5',section5)" value="{{sectionsHeadings5?.title}}" style="padding:0 0 0 10px;border:none;"/>
+					</div>
+				</ng-container>
+
+				<ng-container ktPortletTools>
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'preferredCarriers')">
+						  <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header>
+			<kt-portlet-body style="overflow-y:scroll; height:300px;">
+				<div class="row" style="background: #e4e1e1;width: 99%;padding: 1px;">
+					<div cdkDropList [cdkDropListData]="getSectionData?.data?.preferredCarriers" class="preferredCarriers example-list" (cdkDropListDropped)="drop($event)">
+					    <div class="col-md-12" *ngFor="let datas of getSectionData?.data?.preferredCarriers; let i = index" cdkDrag>
+					        <div class="dashlist">
+								<a href="javascript:void(0)" class="listdash">
+									<span class="iconlist">
+										<i *ngIf="!datas?.data?.icon" class="fa fa-check-double"></i>
+										<i *ngIf="datas?.data?.icon" class="{{datas.data.icon}}"></i>
+									</span>
+									<span class="list-text">
+										<span (click)="openWindow(datas)">
+									    	{{datas.data.button_name}}
+									    </span>
+										
+										<span class="editbutton" style="float: right;position: absolute; width: auto; right: 46px; " (click)="viewEntry(content1, datas)">
+											<a style="color:#fff">
+												<i _ngcontent-lox-c14="" class="fa fa-eye"></i>
+											</a>
+										</span>
+
+										<span class="editbutton" (click)="editEntry(content,'preferredCarriers',i,datas._id)" style="float: right;position: absolute; width: auto; right: 22px; ">
+											<i class="flaticon2-edit"></i>
+										</span>
+
+										<span class="editbutton" (click)="deleteRow(datas._id, i, 'preferredCarriers')" style="position:absolute;right:0">
+											<i class="flaticon2-delete"></i>
+										</span>
+									</span>
+								</a>
+							</div>
+					    </div>
+				    </div>
+				</div>
+
+			</kt-portlet-body>
+		</kt-portlet>
+	</div>
+
+	<div class="col-xl-4 colorlist1">
+		<kt-portlet [class]="'   kt-portlet--height-fluid'" >
+			<kt-portlet-header>
+				<ng-container ktPortletTools>
+					<div>
+						<input  type="text" placeholder="Enter Heading" [(ngModel)]="section6" (focus)="focusFunction()" (focusout)="focusOutFunction('6',section6)" value="{{sectionsHeadings6?.title}}" style="padding:0 0 0 10px;border:none;"/>
+					</div>
+				</ng-container>
+				<ng-container ktPortletTools>
+					<a  href="javascript:;" class="btn btn-icon" (click)="open(content,'AddOn')">
+						  <i class="fa fa-plus"></i>
+					</a>
+				</ng-container>
+			</kt-portlet-header>
+			<kt-portlet-body style="overflow-y:scroll; height:300px;">
+				<div class="row" style="background: #e4e1e1;width: 99%;padding: 1px;">
+					<div cdkDropList [cdkDropListData]="getSectionData?.data?.add" class="add example-list" (cdkDropListDropped)="drop($event)">
+					    <div class="col-md-12" *ngFor="let datas of getSectionData?.data?.add; let i = index" cdkDrag>
+					        <div class="dashlist">
+								<a href="javascript:void(0)" class="listdash">
+									<span class="iconlist">
+										<i *ngIf="!datas?.data?.icon" class="fa fa-check-double"></i>
+										<i *ngIf="datas?.data?.icon" class="{{datas.data.icon}}"></i>
+									</span>
+									<span class="list-text">
+										<span (click)="openWindow(datas)">
+									    	{{datas.data.button_name}}
+									    </span>
+										
+										<span class="editbutton" style="float: right;position: absolute; width: auto; right: 46px; " (click)="viewEntry(content1, datas)">
+											<a style="color:#fff">
+												<i _ngcontent-lox-c14="" class="fa fa-eye"></i>
+											</a>
+										</span>
+
+										<span class="editbutton" (click)="editEntry(content,'add',i,datas._id)" style="float: right;position: absolute; width: auto; right: 22px; ">
+											<i class="flaticon2-edit"></i>
+										</span>
+
+										<span class="editbutton" (click)="deleteRow(datas._id, i, 'add')" style="position:absolute;right:0">
+											<i class="flaticon2-delete"></i>
+										</span>
+									</span>
+								</a>
+							</div>
+					    </div>
+				    </div>
+				</div>
+			</kt-portlet-body>
+		</kt-portlet>
+	</div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  	<div class="modal-header">
+	    <h4 class="modal-title" id="modal-basic-title">{{popupName}}</h4>
+	    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"  style="border:3px solid #a3cd49!important">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
+  	</div>
+  	<div class="modal-body" style='border:3px solid #a3cd49!important'>
+  		<form class="kt-form" [formGroup]="homeForm" autocomplete="off">
+		    <div class="form-group">
+			  	<label>Button Name</label>
+			  
+		  		<input type="text" class="form-control" id="button_name" formControlName="button_name" placeholder="Enter Button Name"/>
+
+				<span *ngIf="homeForm.controls.button_name.hasError('required') && homeForm.controls.button_name.touched">
+					<strong style="color:red">Please enter button name.</strong>
+				</span>
+
+				<span *ngIf="homeForm.controls.button_name.hasError('pattern') && homeForm.controls.button_name.touched">
+					<strong style="color:red">Please enter valid button name.</strong>
+				</span>
+			</div>
+		 	
+		 	<div class="form-group">
+			  	<label>Button Url</label>
+			  
+			  	<input type="text" class="form-control" id="button_url" formControlName="button_url" placeholder="Enter Button URL"/>
+
+				<span *ngIf="homeForm.controls.button_url.hasError('required') && homeForm.controls.button_url.touched">
+					<strong style="color:red">Please enter button url.</strong>
+				</span>
+
+				<span *ngIf="homeForm.controls.button_url.hasError('pattern') && homeForm.controls.button_url.touched">
+					<strong style="color:red">Please enter valid button url.</strong>
+				</span>
+			</div>
+
+			<div class="form-group">
+               	<div class="form-group">
+               		<div class="debo">
+               			<label style="margin:0;padding:0">Select Icon</label>
+               			<div style="float:left;width:100%;height: 150px;overflow-x: scroll;">
+
+               				
+
+               				<div *ngFor="let icon of icons; let i=index" style="float:left;width: 18%;padding: 8px 13px;background: #f3f3f3;margin:0 5px 5px 0"> 
+               					<input type="radio" formControlName="selectedIcon" value="{{icon?.icons}}" name="selectedIcon" style="display: inline-block;margin: 0px 10px 0 0;" [checked]="(i===0)" *ngIf="popupName != 'Edit Record'">
+               					
+               					<input type="radio" formControlName="selectedIcon" value="{{icon?.icons}}" name="selectedIcon" style="display: inline-block;margin: 0px 10px 0 0;" *ngIf="popupName == 'Edit Record'">
+               					<!-- [checked]="(i===0)" -->
+               					<i class='{{icon?.icons}}' for="icon?.icons"></i>
+               				</div>
+               			</div>
+
+               			<span *ngIf="homeForm.controls.selectedIcon.hasError('required') && homeForm.controls.selectedIcon.touched">
+							<strong style="color:red">Please select a icon.</strong>
+						</span>
+               	 	</div>
+               	</div>
+           	</div>  
+
+
+           	<div formArrayName="newfields" style="clear:both;">
+           		<div *ngIf="homeForm.controls.newfields.controls.length > 0" style="color:red">
+           			Below fields are required.
+           		</div>
+               	<div [formGroupName]="i" *ngFor="let tech of homeForm.controls.newfields.controls; let i = index" class="form-group">
+               		
+               		<div style="border: 1px solid #e6c9c9;padding: 10px;">
+               			<button type="button" (click)="deleteSellingPoint(i)" id="deleteBtnn" class="deleteBtnn" >X</button>
+	                   	<ng-container *ngFor="let prop of fieldProps" >
+	                       	<label>{{fields[prop].label}}</label>
+	                        <input type="text" [formControlName]="prop" class="form-control"> 
+	                   	</ng-container>
+               	 	</div>
+               	</div>
+
+               	
+               	<button type="button" (click)="addSellingPoint()" id='addNewBTN'>Add New +</button>
+           	</div>  
+			
+			<button class="btn btn-submit mt-3" (click)="submit()" id='secBtnn'>
+		 		Submit
+		 	</button>
+		</form>
+  	</div>
+</ng-template>
+
+<ng-template #content1 let-c="close" let-d="dismiss">
+  	<div class="modal-header">
+	    <h4 class="modal-title" id="modal-basic-title">View Record</h4>
+	    <a href="{{proceedURL}}" onclick="window.open(this.href, '','left=500,top=150,width=500,height=500,toolbar=1,resizable=0'); return false;" class='proceedBTN'>
+	    	Proceed
+	    </a>
+	    <button type="button" class="close" aria-label="Close" (click)="close('Cross click')" style="border:3px solid #a3cd49!important">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
+  	</div> 
+  	<div class="modal-body" style='border:3px solid #a3cd49!important'>
+	    <form class="kt-form" [formGroup]="homeForm" autocomplete="off">
+		    <div class="form-group">
+			  	<label>Button Name</label>
+			  
+		  		<input type="text" class="form-control" id="button_name" formControlName="button_name" placeholder="Enter Button Name" readonly/>
+			</div>
+		 	<div class="form-group">
+			  	<label>Button Url</label>
+			  
+			  	<input type="text" class="form-control" id="button_url" formControlName="button_url" placeholder="Enter Button URL" readonly/>
+			</div>
+
+			<div formArrayName="newfields">
+               	<div [formGroupName]="i" *ngFor="let tech of homeForm.controls.newfields.controls; let i = index" class="form-group">
+               		<div style="display:inline-block;border: 1px solid #e6c9c9;padding: 10px;">
+	                   	<ng-container *ngFor="let prop of fieldProps ; let i=index">
+	                       	<!-- <label>{{fields[prop].label}}</label> -->
+	                        <textarea class='{{i}}_view' type="text" [formControlName]="prop" class="form-control" readonly style="float:left;width:45%; height:auto;padding:6px 7px;margin:0 5px 0 13px;"></textarea> 
+
+	                        <!-- <span (click)='copy()'></span> -->
+	                   	</ng-container>
+               	 	</div>
+               	</div>
+           	</div>  
+		</form>
+  	</div>
+
+
+
+</ng-template>

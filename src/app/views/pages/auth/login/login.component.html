@@ -1,0 +1,155 @@
+<!-- banner -->
+		<section class=" home-one homeslider home1-overlay">
+			<section class="inner_page_breadcrumb" style="z-index: 9;min-height:290px;max-height:290px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+							<div class="breadcrumb_content text-center">
+								<h4 class="breadcrumb_title">Welcome to Apex Insurance Group</h4>
+								<ol class="breadcrumb pt-0">
+								    <li class="breadcrumb-item"><a href="#">Home</a></li>
+								    <li class="breadcrumb-item active" aria-current="page">Login</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>  
+		<!-- // end banner -->
+
+		<!-- login form -->
+		<section class="our-log-reg bgc-fa">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-6 offset-lg-3">
+					<div class="sign_up_form inner_page" style="margin-top: -86px; position: relative; z-index: 9;">
+						<div class="details">
+							<form class="kt-form" [formGroup]="loginForm" autocomplete="off">
+								<div class="form-group">
+									<mat-form-field>
+										<!-- <mat-label>{{ 'AUTH.INPUT.EMAIL' | translate }} / {{ 'AUTH.INPUT.USERNAME' | translate }}</mat-label> -->
+										<input class="" matInput type="email" placeholder="{{ 'AUTH.INPUT.EMAIL' | translate }} / {{ 'AUTH.INPUT.USERNAME' | translate }}" formControlName="email" autocomplete="off"/>
+										<mat-error *ngIf="isControlHasError('email','required')">
+											<strong>Please enter email/username</strong>
+										</mat-error>
+										<mat-error *ngIf="isControlHasError('email','email')">
+											<strong>Please enter valid email</strong>
+										</mat-error>
+										<mat-error *ngIf="isControlHasError('email','minlength')">
+											<strong>Minimum 6 characters are required for email</strong>
+										</mat-error>
+										<mat-error *ngIf="isControlHasError('email','maxlength')">
+											<strong>Maximum 320 characters are required for email</strong>
+										</mat-error>
+									</mat-form-field>
+								</div>
+								<div class="form-group">
+									<mat-form-field>
+										<!-- <mat-label>{{ 'AUTH.INPUT.PASSWORD' | translate }}</mat-label> -->
+										<input class="" matInput type="password" placeholder="{{ 'AUTH.INPUT.PASSWORD' | translate }}" formControlName="password" autocomplete="off"/>
+										<mat-error *ngIf="isControlHasError('password','required')">
+											<strong>Please enter password</strong>
+										</mat-error>
+										<mat-error *ngIf="isControlHasError('password','minlength')">
+											<strong>Minimum 6 characters are required for password</strong>
+										</mat-error>
+										<mat-error *ngIf="isControlHasError('password','maxlength')">
+											<strong>Maximum 100 characters are required for password</strong>
+										</mat-error>
+									</mat-form-field>
+								</div>
+								<div class="form-group termsCheck rememberPas">
+									<!-- <div>
+										<input id="terms" type="checkbox">
+										<label for="terms">Remember Password</label>
+									</div> -->
+									<a href="javascript:void(0)" routerLink="/auth/forgot-password" style="color:#a1cf4b;font-weight:bold;">Forgot Password?</a>
+								</div>
+								<div class="kt-login__actions">
+									<button (click)="submit()" [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}" id="kt_login_signin_submit" class="btn btn-log btn-block btn-thm2 mt-5">{{ 'AUTH.LOGIN.BUTTON' | translate }}</button>
+
+									<!-- <span>
+										Do not have account yet? 
+										<a href='https://www.apex-4u.com:8080/dev/#/auth/signup'>Sign up here</a>
+									</span> -->
+								</div>
+							</form>
+							<!-- <form action="#">
+								 <div class="form-group">
+							    	<input type="email" class="form-control" placeholder="Email Address">
+								</div>
+								<div class="form-group">
+							    	<input type="password" class="form-control" placeholder="Password">
+								</div>
+								<div class="form-group termsCheck rememberPas">
+									<div>
+										<input id="terms" type="checkbox">
+										<label for="terms">Remember Password</label>
+									</div>
+									<a href="#">Forgot Password?</a>
+								</div>
+								<button type="submit" class="btn btn-log btn-block btn-thm2 mt-5">Login</button>
+							</form> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		<p class="text-center already mt-4">Don't have an account? <a class="text-thm" href="javascript:void(0)" routerLink="/auth/register">Sign Up</a></p>
+	</div>
+	</section>
+		<!-- // end -->
+
+
+<!-- <div class="kt-login__body">
+	<div class="kt-login__form">
+		<div class="kt-login__title">
+			<h3>Sign In</h3>
+		</div>
+
+		
+		<form class="kt-form" [formGroup]="loginForm" autocomplete="off">
+			<div class="form-group">
+				<mat-form-field>
+					<mat-label>{{ 'AUTH.INPUT.EMAIL' | translate }} / {{ 'AUTH.INPUT.USERNAME' | translate }}</mat-label>
+					<input matInput type="email" placeholder="{{ 'AUTH.INPUT.EMAIL' | translate }} / {{ 'AUTH.INPUT.USERNAME' | translate }}" formControlName="email" autocomplete="off"/>
+					<mat-error *ngIf="isControlHasError('email','required')">
+						<strong>{{ 'AUTH.VALIDATION.REQUIRED_FIELD' | translate }}</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('email','email')">
+						<strong>{{ 'AUTH.VALIDATION.INVALID_FIELD' | translate }}</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('email','minlength')">
+						<strong>{{ 'AUTH.VALIDATION.MIN_LENGTH_FIELD' | translate }} 3</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('email','maxlength')">
+						<strong>{{ 'AUTH.VALIDATION.MAX_LENGTH_FIELD' | translate }} 320</strong>
+					</mat-error>
+				</mat-form-field>
+			</div>
+			<div class="form-group">
+				<mat-form-field>
+					<mat-label>{{ 'AUTH.INPUT.PASSWORD' | translate }}</mat-label>
+					<input matInput type="password" placeholder="{{ 'AUTH.INPUT.PASSWORD' | translate }}" formControlName="password" autocomplete="off"/>
+					<mat-error *ngIf="isControlHasError('password','required')">
+						<strong>{{ 'AUTH.VALIDATION.REQUIRED_FIELD' | translate }}</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('password','minlength')">
+						<strong>{{ 'AUTH.VALIDATION.MIN_LENGTH_FIELD' | translate }} 3</strong>
+					</mat-error>
+					<mat-error *ngIf="isControlHasError('password','maxlength')">
+						<strong>{{ 'AUTH.VALIDATION.MAX_LENGTH_FIELD' | translate }} 100</strong>
+					</mat-error>
+				</mat-form-field>
+			</div>
+			<div class="kt-login__actions">
+				<button (click)="submit()" [ngClass]="{'kt-spinner kt-spinner--right kt-spinner--md kt-spinner--light': loading}" id="kt_login_signin_submit" class="btn btn-primary btn-elevate kt-login__btn-primary">{{ 'AUTH.LOGIN.BUTTON' | translate }}</button>
+
+				<span>
+					Do not have account yet? 
+					<a href='https://www.apex-4u.com:8080/dev/#/auth/signup'>Sign up here</a>
+				</span>
+			</div>
+		</form>
+	</div>
+</div> -->

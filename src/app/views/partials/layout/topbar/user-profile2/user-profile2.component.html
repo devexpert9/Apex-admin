@@ -1,0 +1,57 @@
+<div ngbDropdown placement="bottom-right" class="kt-header__topbar-item kt-header__topbar-item--user">
+
+	<!-- <a href='https://www.apex-4u.com:8080/dev/#/{{portal}}' target="_BLANK" style="background: red;color: #fff; font-weight:bold; padding: 2px 12px;
+    margin: -4px 27px 0 0;">
+		Your subscription will be expired in 2 days.
+	</a> -->
+
+	<a href='https://www.apex-4u.com/{{portal}}' target="_BLANK" style="background: #a1cd48;color: #fff; font-weight:bold; padding: 2px 12px;
+    margin: -4px 27px 0 0;">
+		View Your Portal
+	</a>
+
+	<div ngbDropdownToggle class="kt-header__topbar-wrapper">
+		<span class="kt-header__topbar-welcome" >Hi,</span>
+		<span class="kt-header__topbar-username" id='topName'>{{name}}</span>
+		<i class="fa fa-caret-down" aria-hidden="true" style="
+    color: #fff;
+    border: 1px solid;
+    padding: 1px 5px 0 5px;
+    font-size: 15px;
+"></i>
+		<!-- <img  alt="Pic" src="assets/media/users/100_1.jpg"> -->
+	</div>
+	<div ngbDropdownMenu class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl" style="position: absolute;top: 25px;width: 10px;left: 101px;">
+	
+		<!-- <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(./assets/media/misc/bg-1.jpg)">
+			<div class="kt-user-card__avatar">
+				<img alt="Pic" [attr.src]="_user.pic"/>
+				<span [hidden]="true" class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">
+					{{_user.fullname|firstLetter}}
+				</span>
+			</div>
+			<div class="kt-user-card__name">
+				{{_user.fullname}}
+			</div>
+			
+		</div> -->
+	
+	<!-- 	<div class="kt-notification">
+			
+	
+			<div class="kt-notification__custom">
+				<a href="javascript:;" (click)="logout()" class="btn btn-outline-brand btn-upper btn-sm btn-bold">Sign Out</a>
+			</div>
+		</div> -->
+	
+
+		
+		<!-- <ul class="kt-nav kt-margin-b-10 kt-hidden"> -->
+			
+			<li class="kt-nav__item kt-nav__item--custom kt-margin-t-15" style="margin-top: 0!important;">
+				<a (click)="logout()" class="btn btn-label-brand btn-sm btn-bold">Sign Out</a>
+			</li>
+		<!-- </ul> -->
+		
+	</div>
+</div>

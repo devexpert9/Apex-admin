@@ -1,0 +1,75 @@
+<!-- <div class="kt-grid kt-grid--hor kt-grid--root kt-login kt-login--v1" id="kt_login">
+	<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--desktop kt-grid--ver-desktop kt-grid--hor-tablet-and-mobile">
+		<div class="kt-grid__item kt-grid__item--order-tablet-and-mobile-2 kt-grid kt-grid--hor kt-login__aside" style="background-image: url(./assets/media/demos/demo8/bg-1.jpg);">
+			<div class="kt-grid__item">
+				<a href="javascript:;" class="kt-login__logo">
+					<img src="./assets/media/logos/logo-8.png" alt="">
+				</a>
+			</div>
+			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
+				<div class="kt-grid__item kt-grid__item--middle">
+					<h3 class="kt-login__title">Welcome to Apex Insurance 4U!</h3>
+					<h4 class="kt-login__subtitle"></h4>
+				</div>
+			</div>
+			<div class="kt-grid__item">
+				<div class="kt-login__info">
+					<div class="kt-login__copyright">
+						© {{today|date:'yyyy'}} Apex Insurance
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="kt-grid__item kt-grid__item--fluid  kt-grid__item--order-tablet-and-mobile-1 kt-login__wrapper"> -->
+
+			<header class="header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu">
+			<div class="container p0">
+				<!--  Responsive Menu -->
+				<nav>
+					<!-- Menu Toggle btn-->
+					<div class="menu-toggle">
+						<img class="nav_logo_img img-fluid" src="./assets/media/logos/logo.png" alt="Apex">
+						<button type="button" id="menu-btn">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<a href="https://www.apex-4u.com/web/" class="navbar_brand float-left dn-smd">
+						<img class="logo1 img-fluid" src="./assets/media/logos/logo.png" alt="header-logo2.png">
+						<img class="logo2 img-fluid" src="./assets/media/logos/logo.png" alt="header-logo2.png">
+
+					</a>
+					<!-- Responsive Menu -->
+
+					<ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
+						<li class="list-inline-item add_listing btn-signup" [ngClass]="{'active':page === '/auth/login'}" style="border:0px;">
+							<a href="javascript:void(0)" routerLink="/auth/login"><span class="dn-lg">Login</span></a>
+						</li>
+						<li class="list-inline-item add_listing btn-signup" [ngClass]="{'active':page === '/auth/register'}" style="border:0px;">
+							<a href="javascript:void(0)" routerLink="/auth/register"><span class="dn-lg">Signup</span></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+
+			<router-outlet></router-outlet>
+		<!-- </div>
+	</div>
+</div> -->
+
+<footer>
+<section class="footer_middle_area pt10 pb10">
+							<div class="container">
+								<div class="row">
+
+									<div class="col-lg-12 col-xl-12">
+										<div class="copyright-widget text-center">
+											<p>© 2020 Apex Insurance Group, All Rights Reserved.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section></footer>

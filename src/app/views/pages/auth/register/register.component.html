@@ -1,0 +1,260 @@
+<div id="page" class="stylehome1 h0">
+			<section class=" home-one homeslider home1-overlay">
+				<section class="inner_page_breadcrumb" style="z-index: 9;max-height:300px;">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="breadcrumb_content text-center">
+									<h4 class="breadcrumb_title">Welcome to Business in a Box</h4>
+									<ol class="breadcrumb pt-0">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Signup</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>  
+
+
+			<section class="our-log-reg bgc-fa">
+			<div class="container">
+			  <div class="tab-content container" id="myTabContent">
+			  	<div class="row mt25 tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+			  		<div class="row">
+			  			<div class="col-sm-12 col-lg-6 offset-lg-3">
+			  				<div class="sign_up_form inner_page" style="margin-top:-105px; position:relative;    z-index: 9;">
+			  					<div class="details">
+			  						<form class="kt-login__form kt-form" [formGroup]="registerForm" autocomplete="off">
+										<div class="form-group">
+											<mat-form-field>
+												<mat-label>Fullname</mat-label>
+												<input matInput type="text" placeholder="Fullname" formControlName="fullname"/>
+												<mat-error *ngIf="isControlHasError('fullname','required')">
+													<strong>Please enter full name</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('fullname','minlength')">
+													<strong>Minimum 6 characters are required for fullname</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('fullname','maxlength')">
+													<strong>Maximum 100 characters are required for fullname</strong>
+												</mat-error>
+											</mat-form-field>
+										</div>
+
+										<div class="form-group">
+											<mat-form-field>
+												<mat-label>Username</mat-label>
+												<input matInput type="text" placeholder="Username" formControlName="username"/>
+												<mat-error *ngIf="isControlHasError('username','required')">
+													<strong>Please enter username</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('username','minlength')">
+													<strong>Minimum 6 characters are required for username. (Only characters allowed)</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('username','pattern')">
+													<strong>Only characters allowed for username</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('username','maxlength')">
+													<strong>Maximum 100 characters are required for password</strong>
+												</mat-error>
+											</mat-form-field>
+										</div>
+
+										<div class="form-group">
+											<mat-form-field>
+												<mat-label>{{ 'AUTH.INPUT.EMAIL' | translate }}</mat-label>
+												<input matInput type="email" placeholder="{{ 'AUTH.INPUT.EMAIL' | translate }}" formControlName="email" autocomplete="off"/>
+												<mat-error *ngIf="isControlHasError('email','required')">
+													<strong>Please enter email</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('email','email')">
+													<strong>Please enter valid email</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('email','minlength')">
+													<strong>Minimum 6 characters are required for email</strong>
+												</mat-error>
+
+												<mat-error *ngIf="isControlHasError('email','maxlength')">
+													<strong>Maximum 320 characters are required for password</strong>
+												</mat-error>
+											</mat-form-field>
+										</div>
+										
+										<div class="form-group">
+											<mat-form-field>
+												<mat-label>{{ 'AUTH.INPUT.PASSWORD' | translate }}</mat-label>
+												<input matInput type="password" placeholder="{{ 'AUTH.INPUT.PASSWORD' | translate }}" formControlName="password" autocomplete="off"/>
+												<mat-error *ngIf="isControlHasError('password','required')">
+													<strong>Please enter password</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('password','minlength')">
+													<strong>Minimum 6 characters are required for password</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('password','pattern')">
+													<strong>No any space allowed for password</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('password','maxlength')">
+													<strong>Maximum 100 characters are required for password</strong>
+												</mat-error>
+											</mat-form-field>
+										</div>
+										<div class="form-group">
+											<mat-form-field>
+												<mat-label>{{ 'AUTH.INPUT.CONFIRM_PASSWORD' | translate }}</mat-label>
+												<input matInput type="password" placeholder="{{ 'AUTH.INPUT.CONFIRM_PASSWORD' | translate }}" formControlName="confirmPassword" autocomplete="off"/>
+												<mat-error *ngIf="isControlHasError('confirmPassword','required')">
+													<strong>Please re-enter password </strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('confirmPassword','minlength')">
+													<strong>Minimum 6 characters are required for password</strong>
+												</mat-error>
+												<mat-error *ngIf="isControlHasError('confirmPassword','maxlength')">
+													<strong>Maximum 100 characters are required for password</strong>
+												</mat-error>
+												<mat-error *ngIf="registerForm.get('confirmPassword').errors && registerForm.get('confirmPassword').errors.ConfirmPassword">
+													<strong>Passsword and ConfirmPassword didn't match.</strong>
+												</mat-error>
+											</mat-form-field>
+
+											
+										</div>
+										<div class="form-group" *ngIf="IsPaymentEnable == 1" style='text-align: center;color: #444;'>
+											<!-- Continue with ${{DefaultPrice}}/ {{DefaultPackageInterval}} Months -->
+
+											<!-- This initial, one-time, enrollment includes {{DefaultPackageInterval}} months of access to the Business in a Box system. -->
+											<div class="about_content" [innerHTML]='packages?.description'></div>
+											<!-- <mat-checkbox name="agree" formControlName="agree">
+												I agree the <a href="javascript:;">terms & conditions</a>
+											</mat-checkbox> -->
+										</div>
+
+										<div class="kt-login__actions" style="text-align: center;">
+											<!-- <a href="javascript:;" routerLink="/auth/forgot-password" class="kt-link kt-login__link-forgot">
+												{{ 'AUTH.GENERAL.FORGOT_BUTTON' | translate }}
+											</a> -->
+											
+										<button type="button" class="button" (click)="submit1(content);"style="background: #a1cf4b;border: 0;color: #fff;margin: 12px 0 0 0;padding:8px 15px" *ngIf="IsPaymentEnable == 1">
+								    		Start Your Enrollment.
+								    	</button>
+
+								    	<button type="button" class="button" (click)="submit11(content)"style="background: #a1cf4b;border: 0;color: #fff;margin: 12px 0 0 0;padding:8px 15px" *ngIf="IsPaymentEnable == 0">
+								    		Start Your Enrollment
+								    	</button>
+									</div>
+								</form>
+		  					</div>
+			  				</div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  </div>
+			</div>
+			<p class="text-center already">Already have an account? <a class="text-thm" href="javascript:void(0)" routerLink="/auth/login">Login</a></p>
+</section>
+
+<!-- CREDIT CARD ENTRIES --------------------------------------->
+<ng-template #content let-c="close" let-d="dismiss">
+	<div style='border: 7px solid #3e826d!important;width:100%;z-index:9999999999999;'>
+	  	<div class="modal-header">
+		    <h4 class="modal-title" id="modal-basic-title" style="color:#3e826d">
+		    	Credit Card Detail
+		    </h4>
+		    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')"  >
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+	  	</div>
+	  	<div class="modal-body" >
+			<!-- FORM BELOW -->
+	  		<form class="credit-card" [formGroup]="homeForm" autocomplete="off" style="width:100%;margin:0;border:0	">
+			 
+			  	<div class="form-body" style="padding: 0">
+				    <!-- Card Number -->
+				    <label style="color:#000;font-weight:500;width:100%">
+				    	Card Number <em>(eg: 4417119669820331)</em>
+				    </label>
+				    <input type="text" class="card-number" placeholder="Card Number" formControlName="card_number" style="margin:0;padding: 12px;color:#000;width:100%" />
+
+				 	<span *ngIf="homeForm.controls.card_number.hasError('required') && homeForm.controls.card_number.touched">
+						<strong style="color:red;">Please enter card number.</strong>
+					</span>
+
+					<span *ngIf="homeForm.controls.card_number.hasError('pattern') && homeForm.controls.card_number.touched">
+						<strong style="color:red">Please enter valid card number.</strong>
+					</span>
+
+				    <!-- Date Field -->
+				    <div class="date-field" style="float:left;width:100%;margin:10px 0 0 0">
+				      	<div class="month" style="float:left;width:100%">
+				      		<label style="color:#000;font-weight:500">Select Expiration Month  <em>(eg: November)</em></label>
+					        <select name="Month" formControlName="exp_month" placeholder="Select Expiration Month"  style="width:100%;margin:0;padding: 12px;color:#000;background: #fff">
+					          <option value="1">January</option>
+					          <option value="2">February</option>
+					          <option value="3">March</option>
+					          <option value="4">April</option>
+					          <option value="5">May</option>
+					          <option value="6">June</option>
+					          <option value="7">July</option>
+					          <option value="8">August</option>
+					          <option value="9">September</option>
+					          <option value="10">October</option>
+					          <option value="11">November</option>
+					          <option value="12">December</option>
+					        </select>
+				      	</div>
+				      	
+			      		<div class="month">
+				      		<span *ngIf="homeForm.controls.exp_year.hasError('required') && homeForm.controls.exp_year.touched">
+								<strong style="color:red">Please select expiration year.</strong>
+							</span>
+				      	</div>
+				      	
+				    </div>
+
+				    <div class="date-field" style="float:left;width:100%;margin:10px 0 0 0">
+				      	
+				      	<div class="year" style="float:left;width:100%">
+				      		<label style="color:#000;font-weight:500">Select Expiration Year  <em>(eg: 2020)</em></label>
+					        <select name="Year" formControlName="exp_year" placeholder="Select Expiry Year" style="margin:0;padding: 12px; float:left;color:#000;width:100%;background: #fff">
+					          <option value="2020">2020</option>
+					          <option value="2021">2021</option>
+					          <option value="2022">2022</option>
+					          <option value="2023">2023</option>
+					          <option value="2024">2024</option>
+					        </select>
+				      	</div>
+				      	<div class="year">
+				      		<span *ngIf="homeForm.controls.exp_month.hasError('required') && homeForm.controls.exp_month.touched">
+								<strong style="color:red">Please enter expiration month.</strong>
+							</span>
+				      	</div>
+				 	</div>
+				    <!-- Card Verification Field -->
+				    <div class="card-verification" style="float:left;width:100%;margin:10px 0 0 0">
+				      <div class="cvv-input">
+				      	<label style="color:#000;font-weight:500">CVV  <em>(eg: 123)</em></label>
+				        <input type="text" placeholder="CVV" formControlName="cvv" style="width:100%;margin:0;color:#000;padding: 12px">
+				      </div>
+				      	<span *ngIf="homeForm.controls.cvv.hasError('required') && homeForm.controls.cvv.touched">
+							<strong style="color:red">Please enter cvv.</strong>
+						</span>
+
+						<span *ngIf="homeForm.controls.cvv.hasError('pattern') && homeForm.controls.cvv.touched">
+							<strong style="color:red">Please enter valid cvv.</strong>
+						</span>
+				    </div>
+				 
+				    <!-- Buttons -->
+				    <div style="float:left;margin: 10px 0 15px 0;width:100%;text-align: center;">
+					    	<a (click)="doPayment(packages)" style="background: #3c7f6b;border: 0;color: #fff;padding: 4px 17px;font-size: 15px;font-weight: bold;">
+					    		Proceed
+					    	</a>
+					</div>
+			  	</div>
+			</form>
+	  	</div>
+  	</div>
+</ng-template>
+
+

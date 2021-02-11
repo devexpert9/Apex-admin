@@ -1,0 +1,91 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700&amp;display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+// import login css
+@import "sass/pages/login/login-1";
+
+kt-auth, .kt-login {
+	height: 100%;
+
+	.mat-form-field {
+		width: 100%;
+	}
+
+	// add extra right padding when displaying spinner in button
+	.kt-spinner {
+		padding-right: 3rem !important;
+	}
+}
+
+.header-nav{
+	position:absolute;
+	z-index:99;
+	left:0;
+	right:0;
+}
+#kt_login_signin_submit.maxw{
+	max-width: 120px;
+	margin-left:15px;
+	line-height: 30px;
+}
+#kt_login_signup_cancel{
+	font-size: 14px;
+	border-radius: 8px;
+	line-height: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.mat-warn .mat-input-element, .mat-form-field-invalid .mat-input-element, .mat-input-element, .cdk-text-field-autofill-monitored:-webkit-autofill{
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 155% !important;
+    font-weight: 500 !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+.mat-error strong{
+	font-weight: 500 !important;
+	letter-spacing: .5px;
+}
+.mat-checkbox-label{
+	font-family: 'Montserrat', sans-serif !important;
+    font-size: 13px !important;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background{
+	background-color:#a4cf4a !important; 
+}
+
+li.header {
+    font-size: 18px;
+    font-weight: 600;
+}
+ul.price {
+	width: 31.2%;
+}
+
+.subs {
+	padding-left: 12px;
+}
+@media screen and (max-width: 768px) {
+ul.price.ng-star-inserted {
+    width: 100%;
+    border: 1px solid #b7d57d !important;
+    margin-bottom: 19px !important;
+}
+.subs {
+	padding: 0;
+}
+.ace-responsive-menu > li > a {
+	padding: 6px 14px;
+}
+
+.ace-responsive-menu {
+	float: left;
+    width: 60%;
+}
+}
